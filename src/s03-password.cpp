@@ -14,11 +14,12 @@ auto main ( int argc , char * argv []) -> int
     if (argc == 0) {
         return 1;
     }
-
     auto const pass = argv [1];
-    while (ask_user_for_pass ("password: ") != pass){
-        ask_user_for_pass ("password: ");
+    std::string guess = 'gff';
+    do {
+      guess = ask_user_for_pass ("password: ");
     }
+    while (guess != pass);
     std::cout << "ok!\n ";
     return 0;
 }

@@ -6,17 +6,20 @@ auto main ( int argc , char * argv []) -> int
     if (argc == 0) {
         return 1;
     }
-
     int number = std::stoi (argv [1]);
-    std::cout << number << "\n";
-    if(number%3 == 0 && number%5 == 0){
-        std::cout << "FizzBuzz" << "\n";
-    }
-    else if(number%3 == 0){
-        std::cout << "Fizz" << "\n";
-    }
-    else if(number%5 == 0){
-        std::cout << "Buzz" << "\n";
+
+    for(int i = number; i > 0; i--){
+        std::cout << i;
+        if(i%3 == 0 && i%5 == 0){
+            std::cout << " FizzBuzz";
+        }
+        else if(i%3 == 0){
+            std::cout << " Fizz";
+        }
+        else if(i%5 == 0){
+            std::cout << " Buzz";
+        }
+        std::cout  << "\n";
     }
     return 0;
 }
